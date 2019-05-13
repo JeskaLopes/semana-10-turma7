@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery - Reprograma</title>
+
+</head>
+
+<body>
+
+    <input type="password" name="senha" id="senha" />
+    
+    <br>
+    <br>
+
+    <div id="forca">Força: </div>
+
+    <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+    <script>
+            //keyup-assiste o evento de digitar
+        $(document).ready(function() {
+            $('#senha').keyup(function(){
+                let senha = $(this).val();
+                let forca = 0; 
+                if(senha.length > 4){
+                    forca +=25;
+                }
+                var regNum = new RegExp(/[0-9]/i);
+                if(regNum.test(senha)){
+                    forca +=25;
+                }
+                var regCar = new RegExp(/[a-z]/i);
+                 if(regCar.test(senha)){
+                    forca +=25;
+                }
+                var regEsp = new RegExp(/[^a-z0-9]/i);
+                 if(regEsp.test(senha)){
+                    forca +=25;
+                }
+
+                var aceito = 'Não';
+                if(forca >=75){
+                    aceito = 'Sim';
+                }
+                $('#forca').html("Força: " + forca +" Senha: " + senha +" Aceito: " + aceito);
+            })
+        });
+
+    </script>
+</body>
+
+</html>
