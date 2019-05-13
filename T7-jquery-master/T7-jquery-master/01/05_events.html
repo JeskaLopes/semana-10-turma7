@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>jQuery - Reprograma</title>
+
+</head>
+
+<body>
+
+    <p>Clique aqui.</p>
+
+    <br> Name:
+    <input type="text" name="nome" class="fundoVerde" >
+
+    <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+    <script>
+        
+        $("p").dblclick(function () {
+            alert("p clicado");
+        });
+
+        $(document).ready(function () {
+            $("input").focus(function () {
+                $(this).toggleClass("fundoVerde");
+            });
+            
+        });
+
+        // $("p").mouseenter(function() {
+        //     alert("hello, it's me");
+        // });
+    </script>
+
+</body>
+
+</html>
