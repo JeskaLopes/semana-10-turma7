@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
     <title>jQuery - Reprograma</title>
 
 </head>
@@ -43,6 +44,22 @@
                 if(forca >=75){
                     aceito = 'Sim';
                 }
+                aceito=(forca >=75)   
+                $(this).toggleClass('fundoVerde', aceito);
+                $(this).toggleClass('fundoVermelho', !aceito); 
+
+                /*
+                if(forca >= 75){
+                    $(this).removeClass("fundoVermelho")
+                    $(this).addClass("fundoVerde")
+                }
+                else{
+                    $(this).removeClass("fundoVerde")
+                    $(this).addClass("fundoVermelho")
+                };
+                */
+
+               
                 $('#forca').html("Força: " + forca +" Senha: " + senha +" Aceito: " + aceito);
             })
         });
