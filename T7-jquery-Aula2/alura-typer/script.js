@@ -6,8 +6,6 @@ $(document).ready(function(){
         $('.texto-digitado').text($(this).val())
 
         console.log(qtdPalavras)
-     
     });
-
     //$('#campo-digitacao').html(`Força:${forca} - Senha:${senha} - Aceito:${aceito}`)
 });
