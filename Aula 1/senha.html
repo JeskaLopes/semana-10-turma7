@@ -27,6 +27,7 @@
                 if(senha.length > 4){
                     forca +=25;
                 }
+                //regexp: código criado para validação de caracteres
                 var regNum = new RegExp(/[0-9]/i);
                 if(regNum.test(senha)){
                     forca +=25;
@@ -59,7 +60,7 @@
                 };
                 */
 
-               
+               //aqui é descrito como o resultado será apresentado no html
                 $('#forca').html("Força: " + forca +" Senha: " + senha +" Aceito: " + aceito);
             })
         });

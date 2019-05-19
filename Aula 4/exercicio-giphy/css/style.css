@@ -1,13 +1,17 @@
 body {
   margin: 0;
-  font-family: Verdana, Geneva, sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   background-color: #000;
-  color: #ec22f7;
+  color: #da8cdf;
+}
+
+h2{
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 .formulario {
   width: 100vw;
-  border-bottom: solid 5px #f4cb42;
+  border-bottom: solid 5px #7dafdf;
   padding: 20px;
   display: flex;
   flex-direction: column;
